@@ -7,9 +7,8 @@ func main() {
 }
 
 func intToRoman(num int) string {
-	nums := []int{1100, 1000, 900, 600, 500, 400, 110, 100, 90, 60, 50, 40, 11, 10, 9, 6, 5, 4, 1}
-	symbols := []string{"MC", "M", "CM", "DC", "D", "CD", "CX", "C", "XC", "LX", "L", "XL", "XI",
-		"X", "IX", "VI", "V", "IV", "I"}
+	nums := []int{1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1}
+	symbols := []string{"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"}
 	res, i := "", 0
 	for num != 0 {
 		for num < nums[i] {
@@ -18,9 +17,6 @@ func intToRoman(num int) string {
 		}
 		num -= nums[i]
 		res += symbols[i]
-
-		print("-")
-		print(res)
 
 	}
 	return res
